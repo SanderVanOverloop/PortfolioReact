@@ -24,10 +24,10 @@ export default function ContactPage() {
 
         emailjs
             .send(
-                'service_o85moqt', // Replace with your EmailJS service ID
-                'template_n6ftd9r', // Replace with your EmailJS template ID
+                'service_o85moqt',
+                'template_n6ftd9r',
                 formData,
-                'jwUZShhzhjO-FXaiD' // Replace with your EmailJS user ID
+                'jwUZShhzhjO-FXaiD'
             )
             .then(
                 () => {
