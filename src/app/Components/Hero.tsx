@@ -10,7 +10,7 @@ export default function Hero() {
                 <h1 className="text-5xl md:text-7xl font-extrabold">
                     Hi, I&apos;m <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Sander Van Overloop</span>
                 </h1>
-                <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-xl">
+                <p className="mt-6 text-lg md:text-xl text-black-300 max-w-xl">
                     I&apos;m a full-stack software developer. I love programming because it lets me turn ideas into working solutions and solve real-world problems.
                 </p>
                 <div className="mt-8 flex flex-col md:flex-row gap-4">
