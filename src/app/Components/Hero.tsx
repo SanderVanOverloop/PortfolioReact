@@ -15,6 +15,11 @@ export default function Hero() {
                     showBehindGradient={false}
                     enableTilt={true}
                     className="space-y-4"
+                    behindGradient={null} /* Default value */
+                    innerGradient={null} /* Default value */
+                    miniAvatarUrl={null} /* Default value */
+                    onContactClick={() => {}} /* Empty function */
+
                 />
 
                 {/* 🧠 Name and description */}
