@@ -3,10 +3,8 @@
 import { useState } from 'react';
 import Navbar from '../Components/Navbar';
 import emailjs from 'emailjs-com';
-import { useTheme } from '../Components/ThemeContext';
 
 export default function ContactPage() {
-    const { isDarkMode } = useTheme();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -44,13 +42,9 @@ export default function ContactPage() {
 
     return (
         <>
-            <Navbar/>
-            <br/>
-            <main
-                className={`min-h-screen px-6 py-12 ${
-                    isDarkMode ? "bg-gray-950 text-white" : "bg-white text-gray-900"
-                }`}
-            >
+            <Navbar />
+            <br />
+            <main className="min-h-screen px-6 py-12 bg-white text-gray-900">
                 <section className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Contact Me</h1>
                     <p className="text-lg md:text-xl leading-relaxed">
@@ -61,9 +55,7 @@ export default function ContactPage() {
                 <section className="max-w-4xl mx-auto mt-12">
                     <form
                         onSubmit={handleSubmit}
-                        className={`p-6 rounded-lg shadow-lg space-y-6 ${
-                            isDarkMode ? "bg-gray-800" : "bg-gray-100"
-                        }`}
+                        className="p-6 rounded-lg shadow-lg space-y-6 bg-gray-100"
                     >
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium">
@@ -75,9 +67,7 @@ export default function ContactPage() {
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
-                                className={`mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 ${
-                                    isDarkMode ? "bg-gray-900 text-white border-gray-700" : "bg-gray-200 text-gray-900 border-gray-300"
-                                }`}
+                                className="mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 bg-gray-200 text-gray-900 border-gray-300"
                                 placeholder="Your Name"
                                 required
                             />
@@ -92,9 +82,7 @@ export default function ContactPage() {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className={`mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 ${
-                                    isDarkMode ? "bg-gray-900 text-white border-gray-700" : "bg-gray-200 text-gray-900 border-gray-300"
-                                }`}
+                                className="mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 bg-gray-200 text-gray-900 border-gray-300"
                                 placeholder="Your Email"
                                 required
                             />
@@ -109,9 +97,7 @@ export default function ContactPage() {
                                 name="subject"
                                 value={formData.subject}
                                 onChange={handleChange}
-                                className={`mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 ${
-                                    isDarkMode ? "bg-gray-900 text-white border-gray-700" : "bg-gray-200 text-gray-900 border-gray-300"
-                                }`}
+                                className="mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 bg-gray-200 text-gray-900 border-gray-300"
                                 placeholder="Subject"
                                 required
                             />
@@ -126,18 +112,14 @@ export default function ContactPage() {
                                 value={formData.message}
                                 onChange={handleChange}
                                 rows={5}
-                                className={`mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 ${
-                                    isDarkMode ? "bg-gray-900 text-white border-gray-700" : "bg-gray-200 text-gray-900 border-gray-300"
-                                }`}
+                                className="mt-1 block w-full px-4 py-2 rounded-lg border focus:ring-blue-500 focus:border-blue-500 bg-gray-200 text-gray-900 border-gray-300"
                                 placeholder="Your Message"
                                 required
                             ></textarea>
                         </div>
                         <button
                             type="submit"
-                            className={`w-full px-6 py-3 rounded-lg font-medium transition ${
-                                isDarkMode ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-blue-400 hover:bg-blue-500 text-gray-900"
-                            }`}
+                            className="w-full px-6 py-3 rounded-lg font-medium transition bg-blue-400 hover:bg-blue-500 text-gray-900"
                         >
                             Send Message
                         </button>

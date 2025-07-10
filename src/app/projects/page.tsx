@@ -1,11 +1,8 @@
 'use client';
 
 import Navbar from '../Components/Navbar';
-import { useTheme } from '../Components/ThemeContext';
 
 export default function ProjectsPage() {
-    const { isDarkMode } = useTheme();
-
     const projects = [
         {
             title: 'Full-Stack Microservice Blog Platform',
@@ -53,31 +50,17 @@ export default function ProjectsPage() {
         <>
             <Navbar />
             <br />
-            <main
-                className={`min-h-screen px-6 py-12 transition-colors ${
-                    isDarkMode ? 'bg-gray-950 text-white' : 'bg-white text-gray-900'
-                }`}
-            >
+            <main className="min-h-screen px-6 py-12 bg-white text-gray-900">
                 <section className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6">Projects</h1>
                     <p className="text-lg md:text-xl leading-relaxed">
                         I&apos;m currently working on some exciting projects! Stay tuned for updates.
                     </p>
                     <div className="mt-12 flex justify-center">
-                        <div
-                            className={`relative w-64 h-64 rounded-full animate-pulse ${
-                                isDarkMode
-                                    ? 'bg-gradient-to-r from-blue-500 to-purple-600'
-                                    : 'bg-gradient-to-r from-blue-400 to-purple-500'
-                            }`}
-                        ></div>
+                        <div className="relative w-64 h-64 rounded-full animate-pulse bg-gradient-to-r from-blue-400 to-purple-500"></div>
                     </div>
                     <button
-                        className={`mt-8 px-6 py-3 rounded-lg font-medium transition ${
-                            isDarkMode
-                                ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                                : 'bg-blue-400 hover:bg-blue-500 text-gray-900'
-                        }`}
+                        className="mt-8 px-6 py-3 rounded-lg font-medium transition bg-blue-400 hover:bg-blue-500 text-gray-900"
                         onClick={() => alert('Check back soon!')}
                     >
                         Check Back Later
@@ -89,23 +72,15 @@ export default function ProjectsPage() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className={`rounded-xl p-6 shadow-lg transition-transform hover:scale-[1.02] ${
-                                isDarkMode
-                                    ? 'bg-white/5 border border-white/10'
-                                    : 'bg-gray-100 border border-gray-200'
-                            }`}
+                            className="rounded-xl p-6 shadow-lg transition-transform hover:scale-[1.02] bg-gray-100 border border-gray-200"
                         >
                             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                            <p className="text-sm text-gray-300 dark:text-gray-400 mb-4">{project.summary}</p>
+                            <p className="text-sm text-gray-400 mb-4">{project.summary}</p>
                             <div className="flex flex-wrap gap-2 mt-2">
                                 {project.tech.map((tech, i) => (
                                     <span
                                         key={i}
-                                        className={`text-xs px-2 py-1 rounded-md ${
-                                            isDarkMode
-                                                ? 'bg-gray-800 text-white'
-                                                : 'bg-blue-100 text-blue-800'
-                                        }`}
+                                        className="text-xs px-2 py-1 rounded-md bg-blue-100 text-blue-800"
                                     >
                                         {tech}
                                     </span>
