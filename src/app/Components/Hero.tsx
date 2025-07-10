@@ -10,7 +10,7 @@ export default function Hero() {
                 <ProfileCard
                     name="Sander"
                     title="Full-Stack Developer"
-                    avatarUrl="/me.jpg"
+                    avatarUrl="./me.jpg"
                     showUserInfo={false}
                     showBehindGradient={false}
                     enableTilt={true}
