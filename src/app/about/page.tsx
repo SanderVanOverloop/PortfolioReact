@@ -81,7 +81,7 @@ export default function Page() {
                     <p className="text-lg md:text-xl leading-relaxed">
                         Hi, I’m Sander Van Overloop, a recent graduate in Applied Computer Science from Hogeschool PXL
                         and a full-stack developer with a strong interest in backend development, especially in Java.
-                        I'm also open to frontend projects and enjoy building complete, user-focused applications.
+                        I&#39;m also open to frontend projects and enjoy building complete, user-focused applications.
                         Outside of coding, I’m passionate about Formula 1, gaming, walking in nature, and staying active.
                         I believe in continuous learning and always strive to grow both professionally and personally.
                     </p>
