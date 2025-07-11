@@ -1,6 +1,7 @@
 'use client';
 
 import ProfileCard from '../../../reactbits/ProfileCard/ProfileCard';
+import GradientText from '../../../reactbits/GradientText/GradientText'
 
 export default function Hero() {
     return (
@@ -15,35 +16,35 @@ export default function Hero() {
                     showBehindGradient={false}
                     enableTilt={true}
                     className="space-y-4"
-                    behindGradient={null} /* Default value */
-                    innerGradient={null} /* Default value */
-                    miniAvatarUrl={null} /* Default value */
-                    onContactClick={() => {}} /* Empty function */
+                    behindGradient={null}
+                    innerGradient={null}
+                    miniAvatarUrl={null}
+                    onContactClick={() => {}}
 
                 />
 
                 {/* 🧠 Name and description */}
-                <h1 className="text-5xl md:text-7xl font-extrabold mt-8">
+                <h1 className="text-5xl md:text-7xl font-extrabold mt-8 text-gray-900">
                     Hi, I&apos;m{' '}
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
             Sander Van Overloop
           </span>
                 </h1>
+                <GradientText
+                    colors={["rgb(255, 0, 0)", "rgb(0, 255, 0)", "rgb(0, 0, 255)", "rgb(255, 255, 0)", "rgb(255, 0, 255)"]}
+                    animationSpeed={20}
+                    showBorder={false}
+                    className="custom-class"
+                >
+                    I&apos;m a full-stack software developer. I love programming because it lets me turn ideas into
+                    working solutions and solve real-world problems.
+                </GradientText>
 
-                <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-xl">
-                    I&apos;m a full-stack software developer. I love programming because it lets me turn ideas into working solutions and solve real-world problems.
-                </p>
 
                 {/* 🔗 Buttons */}
                 <div className="mt-8 flex flex-col md:flex-row gap-4">
                     <a
-                        href="#projects"
-                        className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-white font-medium transition"
-                    >
-                        View Projects
-                    </a>
-                    <a
-                        href="/Sander-Van-Overloop-CV.pdf"
+                        href="./Sander-Van-Overloop-CV.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full text-white font-medium transition"
